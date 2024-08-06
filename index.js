@@ -34,6 +34,9 @@ app.get("/api/whoami", function (req, res) {
   // console.log("Accept Header:", req.acceptsCharsets.toString());
   // console.log("Accept Header:", req.acceptsEncodings.toString());
   // console.log("Accept Header:", req.acceptsLanguages.toString());
+  console.log("IP Address:", req.ip);
+  console.log("Accept Language:", req.headers["accept-language"]);
+  console.log("User Agent:", req.headers["user-agent"]);
 
   res.json({
     ipaddress: req.socket.remoteAddress,
